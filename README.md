@@ -2,18 +2,18 @@
 
 ## Information
 
-Added functionality for dynamically create  navigation menu based on the sections of the page
-- each new section will provoke creating a new link in navigation bar.
-- was used DocumentFragment, because of it changes made to the fragment don't affect the document, cause reflow, or incur any performance impact that can occur when changes are made.
- 
-Added the functionality to scroll to sections
-- was used addEventListener for listening event of "click" type.
-- was used preventDefault() for prevent click using href attribute.
-- was used scrollIntoView() for scroll to particular section.
+New functionality added to dynamic menu
+- add of a new section will create a new link in navigation bar automatically.
+- DocumentFragment used to create HTML node element and to avoid reflow issue, or any other performance impact during page modification.
+  
+New functionality to scroll to sections
+- addEventListener used for click event listening.
+- preventDefault() used to prevents the default action of the browser by click.
+- scrollIntoView() used to scroll to selected section.
 
-Added functionality to distinguish the section in view
-- was used IntersectionObserver for recognize particular section in viewport.
-- by click or scroll into view will be added "active" value in special attribute belonging particular section or link in nav bar and after it they will be highlighted using css styles. 
+New functionality to highlight the selected section on the page
+- IntersectionObserver used to subscribe to user navigation.
+- class "active" added automatically to menu and section element up on user navigation.
  
-Assuming that most of users have newest Browser versions IntersectionObserver will work fine considering this.
-For more information about supporting versions take a look on comparison table https://caniuse.com/#feat=intersectionobserver
+Assuming that most of users have newest Browser version installed, IntersectionObserver will work as expected.
+For more information about supporting versions please refer to https://caniuse.com/#feat=intersectionobserver
