@@ -103,6 +103,7 @@ section {
     background-color: rgb(75,75,75);
     color: #fff;
     border-radius: 50%;
+    outline: none;
 }
 
 /* Header Styles */
