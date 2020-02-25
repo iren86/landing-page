@@ -42,7 +42,7 @@ function scrollToSection() {
         const navItem = element.getAttribute('data-section');
         const sectionSelector = `#${navItem}`;
         const target = document.querySelector(sectionSelector);
-        target.scrollIntoView();
+        target.scrollIntoView({behavior: "smooth", block: "start"});
       }
     );
   });
